@@ -1,0 +1,5 @@
+git status
+git add .....
+git commit -m "comment vd: updload bai tap 1"
+git push origin
+
