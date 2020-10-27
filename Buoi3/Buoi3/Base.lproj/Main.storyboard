@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eTh-Cq-6E8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Light View Controller-->
+        <scene sceneID="Qky-JD-FhB">
+            <objects>
+                <viewController id="eTh-Cq-6E8" customClass="LightViewController" customModule="Buoi3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rnb-1e-8Vz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3KN-Qc-cQV">
+                                <rect key="frame" x="159" y="805" width="96" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcZ-xB-hiU">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="onPress:" destination="eTh-Cq-6E8" eventType="touchUpInside" id="1c5-pw-7oD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KPD-Qg-ROu">
+                                <rect key="frame" x="37" y="107" width="340" height="499"/>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zBc-ky-l03">
+                                <rect key="frame" x="183" y="766" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="turnOffBulb:" destination="eTh-Cq-6E8" eventType="valueChanged" id="VWk-Wj-AgN"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="KPD-Qg-ROu" firstAttribute="top" secondItem="jIe-pW-6R8" secondAttribute="top" constant="22" id="3Yd-xr-a8L"/>
+                            <constraint firstItem="KPD-Qg-ROu" firstAttribute="leading" secondItem="jIe-pW-6R8" secondAttribute="leading" constant="33" id="3hi-Wy-Gf8"/>
+                            <constraint firstItem="KPD-Qg-ROu" firstAttribute="trailing" secondItem="Rnb-1e-8Vz" secondAttribute="trailingMargin" id="f2V-yM-p6E"/>
+                            <constraint firstItem="jIe-pW-6R8" firstAttribute="bottom" secondItem="KPD-Qg-ROu" secondAttribute="bottom" constant="81" id="kEZ-EH-ctB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jIe-pW-6R8"/>
+                    </view>
+                    <connections>
+                        <outlet property="bulbImageView" destination="KPD-Qg-ROu" id="pXR-Hx-hDD"/>
+                        <outlet property="isOnButton" destination="mcZ-xB-hiU" id="S88-FW-nVa"/>
+                        <outlet property="isOnSwitch" destination="zBc-ky-l03" id="tQI-w9-LaX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nll-Ka-sU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-559" y="113"/>
+        </scene>
+    </scenes>
+</document>
